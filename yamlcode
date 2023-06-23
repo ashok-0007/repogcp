@@ -1,0 +1,29 @@
+{
+   "steps": [
+      {
+         "name": "gcr.io/cloud-builders/docker",
+         "args": [
+            "build",
+            "-t",
+            "us-central1-docker.pkg.dev/${PROJECT_ID}/repogcp/terraform-service@my-project-123456-388505.iam.gserviceaccount.com:$SHORT_SHA','
+
+            "."
+         ]
+      }
+   ]
+}
+
+{
+   "steps": [
+      {
+         "name": "gcr.io/cloud-builders/docker",
+         "args": [
+            "push",
+        
+            "us-central1-docker.pkg.dev/${PROJECT_ID}/repogcp/terraform-service@my-project-123456-388505.iam.gserviceaccount.com:$SHORT_SHA','
+
+            "."
+         ]
+      }
+   ]
+}
